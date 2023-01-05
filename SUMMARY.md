@@ -16,6 +16,7 @@
   * [Algo wallet](testnet/wallets/algo-wallet.md)
 * [Developement](testnet/developement/README.md)
   * [API providers](testnet/developement/api-providers.md)
+  * [Faucets](testnet/developement/faucets.md)
 * [Voi Relay network](testnet/voi-relay-network/README.md)
   * [Relay tiers](testnet/voi-relay-network/relay-tiers.md)
   * [Running own relay](testnet/voi-relay-network/running-own-relay.md)
