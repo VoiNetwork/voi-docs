@@ -11,14 +11,6 @@ Light relays run modified algorand code that allows non-archival mode with redir
 Minimum hardware requirements depend on the average transaction volume
 
 {% tabs %}
-{% tab title="up to 50 TPS" %}
-generic Virtual Machine with 1TB monthly traffic
-
-* 2 vCPU
-* 4GB RAM
-* 20GB Local SSD/NVMe or SSD Cloud volume
-{% endtab %}
-
 {% tab title="up to 200 TPS" %}
 generic Virtual Machine with 10 TB monthly traffic
 
@@ -94,7 +86,7 @@ dig +short srv _archive._tcp.voi-test.voi.network
 | Hetzner    | 2      |
 | SpeedyPage | 2      |
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Archival tier" %}
