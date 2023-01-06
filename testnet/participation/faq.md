@@ -64,3 +64,16 @@ Not recommended for high stake accounts. Lost keys increase the chances of chain
 * Ask your friend run a node for you
 * Buy a service that does that for you (TBA)
 
+### What hardware do I need to run a participation node
+
+👉minimal: 2x vCPU, 4GB RAM , 20GB SSD/NVMe, 1TB monthly &#x20;
+
+👉optimal: 4x vCPU, 8GB RAM , 20GB SSD/NVMe, 1TB monthly &#x20;
+
+* Current traffic is low, you can use low-end physical machine or virtual machines
+* You can use "shared CPU" or "burstable 12.5% CPU" machines to save on costs
+
+{% hint style="info" %}
+Participation nodes need to run on diversified networks to prevent mass outages. \
+Running a free cloud or ultra cheap instance ? Try running at least two on different continents and install the same participation key on both machines :D
+{% endhint %}
