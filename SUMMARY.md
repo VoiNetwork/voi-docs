@@ -12,6 +12,8 @@
   * [Guides](testnet/participation/guides.md)
 * [Explore(rs)](testnet/explore-rs/README.md)
   * [Dappflow](testnet/explore-rs/dappflow.md)
+  * [GraphQL Explorer](testnet/explore-rs/graphql-explorer/README.md)
+    * [Query examples](testnet/explore-rs/graphql-explorer/query-examples.md)
 * [Wallets](testnet/wallets/README.md)
   * [Algo wallet](testnet/wallets/algo-wallet.md)
 * [Developement](testnet/developement/README.md)
