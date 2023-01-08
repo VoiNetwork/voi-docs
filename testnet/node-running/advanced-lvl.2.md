@@ -1,4 +1,4 @@
-# Advanced - Lvl.2
+# ⚡ Advanced - Lvl.2
 
 ## Installing Voi testnet node
 
