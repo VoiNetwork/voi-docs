@@ -5,7 +5,7 @@
 ## Testnet
 
 * [Node running](testnet/node-running/README.md)
-  * [Advanced - Lvl.3](testnet/node-running/advanced-lvl.3.md)
+  * [Advanced - Lvl.2](testnet/node-running/advanced-lvl.3.md)
   * [Single click catchup node](testnet/node-running/single-click-catchup-node.md)
   * [Diagnosing issues](testnet/node-running/diagnosing-issues.md)
 * [Participation](testnet/participation/README.md)
