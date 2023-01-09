@@ -77,3 +77,15 @@ Not recommended for high stake accounts. Lost keys increase the chances of chain
 Participation nodes need to run on diversified networks to prevent mass outages. \
 Running a free cloud or ultra cheap instance ? Try running at least two on different continents and install the same participation key on both machines :D
 {% endhint %}
+
+### How many relays does my node connect to ?
+
+👉 Up to 9 relays.
+
+Currently we are suggesting setting non default config parameters that make the network hyperconnected. This setting will be lowered once the network grows.
+
+### Does my node stay connected to same ransom set of relays ?
+
+👉 Nope, your node drops one relay connection every 3-4 minutes.
+
+Your node starts by connecting to random relays but the least performing one is dropped every 3 to 4 minutes.&#x20;
