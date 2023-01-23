@@ -42,6 +42,8 @@ algocfg set -p DNSBootstrapID -v "<network>.voi.network"
 algocfg set -p GossipFanout -v 9
 ```
 
+_Note: You can use these commands as provided, no need to replace `<network>`._
+
 Your `/var/lib/algorand/config.json` should look like :
 
 ```json
