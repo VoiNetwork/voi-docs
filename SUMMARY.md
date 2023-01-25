@@ -23,5 +23,6 @@
   * [Faucets](testnet/developement/faucets.md)
 * [Voi Relay network](testnet/voi-relay-network/README.md)
   * [Relay tiers](testnet/voi-relay-network/relay-tiers.md)
-  * [Running own relay](testnet/voi-relay-network/running-own-relay/README.md)
+  * [Running own relay](testnet/voi-relay-network/running-own-relay.md)
     * [Catchup Relay](testnet/voi-relay-network/running-own-relay/catchup-relay.md)
+    * [Archival Relay](testnet/voi-relay-network/running-own-relay/archival-relay.md)

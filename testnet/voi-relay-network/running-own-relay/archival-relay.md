@@ -1,14 +1,12 @@
-# Catchup Relay
+# Archival Relay
 
-A catchup relay is a new (Q1 2023) type of node that has very low resource usage and can be run on the same hardware as catchup nodes.
-
-{% hint style="info" %}
-Official source code and binaries for this type of node will be available in Q1'23
-{% endhint %}
+An archival relay is type of node that stores the whole blockchain history. The I/O requirements are proportional to the amount of history and current transaction traffic and require datacenter type NVMe drives.&#x20;
 
 ### Requirements
 
-[Hardware requirement ](../running-own-relay.md)are the same as a normal catchup node. As the network grows, in terms of number of normal nodes and traffic,  the requirement for network egress (monthly traffic quota) will be increasing.
+[Hardware requirement ](../running-own-relay.md)are at least 4 times as a normal catchup node. As the network grows, in terms of number of normal nodes and traffic,  the requirement for network egress (monthly traffic quota) will be increasing.&#x20;
+
+Your relay will be calculating catchups every 10k rounds - this proces is very CPU and I/O intensive
 
 {% hint style="warning" %}
 Your node and internet connection need to be up 99.5% of the time.\
@@ -27,12 +25,12 @@ Running obsolete node version counts as downtime.
 
 #### Node configuration
 
-* Install and sync a normal Voi [catchup node](../../node-running/advanced-lvl.2.md)&#x20;
+* Install a normal Voi [catchup node](../../node-running/advanced-lvl.2.md) but **do not sync it yet**
 * Add these config changes and restart your node
 
 ```bash
-# disable archival behaviour
-algocfg set -p Archival -v false
+# enable archival behaviour
+algocfg set -p Archival -v true
 # enable relay mode
 algocfg set -p NetAddress "0.0.0.0:4161"
 # make it hyperconnected
@@ -43,12 +41,14 @@ algocfg set -p EnableMetricReporting true
 algocfg set -p PublicAddress "r-co01.test.voi.network:4161"
 # make sure we are on voi network
 algocfg set -p DNSBootstrapID -v "<network>.voi.network"
-# enable catchup from Archival relays
-algocfg set -p EnableCatchupFromArchiveServers true
-# disable creating catchpoints
-algocfg set -p CatchpointFileHistoryLength 0
-# disable Cadaver 
-algocfg set -p CadaverSizeTarget 0
+# enable serving blocks
+algocfg set -p EnableBlockService true
+# enable ledger service
+algocfg set -p EnableLedgerService true
+# Tune for top#200 stake survival during a storm
+algocfg set -p BroadcastConnectionsLimit 200
+algocfg set -p ConnectionsRateLimitingCount 30
+algocfg set -p ConnectionsRateLimitingWindowSeconds 1
 # enable telemetry
 diagcfg telemetry enable
 ```
