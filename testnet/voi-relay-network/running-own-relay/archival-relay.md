@@ -38,7 +38,7 @@ algocfg set -p GossipFanout 10
 # enable metrics
 algocfg set -p EnableMetricReporting true
 # name the relay to prevent self peering
-algocfg set -p PublicAddress "r-co01.test.voi.network:4161"
+algocfg set -p PublicAddress "a-co01.test.voi.network:4161"
 # make sure we are on voi network
 algocfg set -p DNSBootstrapID -v "<network>.voi.network"
 # enable serving blocks
@@ -55,7 +55,7 @@ diagcfg telemetry enable
 
 ### Joining the network
 
-Once your relays is up and running the core team is going to add your PublicAddress to the list of relays in the Voi network bootstrap SRV record.&#x20;
+Once your archival relay is up and running the core team is going to add your PublicAddress to the list of relays in the Voi network bootstrap SRV record as well as archive SRV record
 
 You can check if your relay is added to the set with this command:
 
@@ -73,5 +73,15 @@ dig +short @1.1.1.1 SRV _algobootstrap._tcp.voi-test.voi.network.
 1 1 8080 r-co06.test.voi.network.
 1 1 8080 r-co07.test.voi.network.
 1 1 8080 r-co08.test.voi.network.
+```
+
+```bash
+dig +short @1.1.1.1 SRV _archive._tcp.voi-test.voi.network.
+```
+
+```bash
+1 1 8080 a-co00.test.voi.network.
+1 1 8080 a-co01.test.voi.network.
+1 1 8080 a-co02.test.voi.network.
 ```
 

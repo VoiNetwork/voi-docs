@@ -86,7 +86,7 @@ dig +short srv _archive._tcp.voi-test.voi.network
 | Hetzner    | 2      |
 | SpeedyPage | 2      |
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 {% endtab %}
 
 {% tab title="Archival tier" %}
