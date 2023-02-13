@@ -3,7 +3,7 @@
 ## Installing Voi testnet node
 
 {% hint style="info" %}
-This guide will help you install non-archival, catch-up node that you can use for development, account management or participation&#x20;
+This guide will help you install non-archival, catch-up node that you can use for development, account management or participation
 {% endhint %}
 
 ### <mark style="color:orange;">Overview</mark>
@@ -13,7 +13,7 @@ This guide will help you install non-archival, catch-up node that you can use fo
 * Enable anonymous telemetry
 * Do a fast catch-up
 
-### <mark style="color:orange;">Step 1 : Install any type of official binaries for Algorand node</mark>&#x20;
+### <mark style="color:orange;">Step 1 : Install any type of official binaries for Algorand node</mark>
 
 This this is advanced level guide and it assumes you already have an Algorand mainnet/testnet node installed on Linux/Ubuntu. You can try some of the guides here:
 
@@ -23,7 +23,7 @@ This this is advanced level guide and it assumes you already have an Algorand ma
 
 ### <mark style="color:orange;">Step 2 : Switch network to Voi</mark>
 
-#### Stop your node either with&#x20;
+#### Stop your node either with
 
 ```
 goal node stop
@@ -40,6 +40,7 @@ systemctl stop algorand
 ```bash
 algocfg set -p DNSBootstrapID -v "<network>.voi.network"
 algocfg set -p GossipFanout -v 9
+algocfg set -p EnableCatchupFromArchiveServers true
 ```
 
 _Note: You can use these commands as provided, no need to replace `<network>`._
@@ -49,13 +50,14 @@ Your `/var/lib/algorand/config.json` should look like :
 ```json
 {
         "GossipFanout": 9,
-        "DNSBootstrapID": "<network>.voi.network"
+        "DNSBootstrapID": "<network>.voi.network",
+        "EnableCatchupFromArchiveServers": true
 }
 ```
 
 #### Overwrite /var/lib/algorand/genesis.json file with the one attached below
 
-{% file src="../../.gitbook/assets/genesis.json" %}
+{% file src="../../.gitbook/assets/gensis.json" %}
 genesis.json
 {% endfile %}
 
@@ -80,10 +82,10 @@ diagcfg telemetry enable
 ### <mark style="color:orange;">Step 4 : Fast catch-up</mark>
 
 {% hint style="info" %}
-This will sync you non-archival node in minutes&#x20;
+This will sync you non-archival node in minutes
 {% endhint %}
 
-#### Start your node either with&#x20;
+#### Start your node either with
 
 ```
 goal node start
