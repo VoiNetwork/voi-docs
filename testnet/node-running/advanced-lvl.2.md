@@ -55,17 +55,15 @@ Your `/var/lib/algorand/config.json` should look like :
 }
 ```
 
-#### Overwrite /var/lib/algorand/genesis.json file with the one attached below
-
-{% file src="../../.gitbook/assets/genesis (2).json" %}
-Voi testnet genesis.json
-{% endfile %}
+#### Overwrite /var/lib/algorand/genesis.json file with Voi genesis
 
 You can also do it with this command:
 
 ```bash
 sudo curl -s -o /var/lib/algorand/genesis.json https://testnet-api.voi.nodly.io/genesis
 ```
+
+Or you can download the genesis.json [here](https://testnet-api.voi.nodly.io/genesis) as well.&#x20;
 
 ### <mark style="color:orange;">Step 3 : Enable anonymous telemetry</mark>
 
