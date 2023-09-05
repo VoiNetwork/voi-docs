@@ -1,2 +1,0 @@
-# Voi Relay network
-

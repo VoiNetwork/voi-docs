@@ -40,7 +40,7 @@ systemctl stop algorand
 ```bash
 algocfg set -p DNSBootstrapID -v "<network>.voi.network"
 algocfg set -p GossipFanout -v 8
-algocfg set -p EnableCatchupFromArchiveServers true
+algocfg set -p EnableCatchupFromArchiveServers -v true
 ```
 
 _Note: You can use these commands as provided, no need to replace `<network>`._
@@ -57,8 +57,8 @@ Your `/var/lib/algorand/config.json` should look like :
 
 #### Overwrite /var/lib/algorand/genesis.json file with the one attached below
 
-{% file src="../../.gitbook/assets/gensis.json" %}
-genesis.json
+{% file src="../../.gitbook/assets/genesis (2).json" %}
+Voi testnet genesis.json
 {% endfile %}
 
 You can also do it with this command:
@@ -95,8 +95,7 @@ systemctl start algorand
 #### Do the fast catch-up
 
 <pre class="language-bash"><code class="lang-bash"><strong>sudo apt install -y jq 
-</strong>goal node catchup $(curl -s https://testnet-api.voi.nodly.io/v2/status|jq -r '.["last-catchp
-oint"]')
+</strong>goal node catchup $(curl -s https://testnet-api.voi.nodly.io/v2/status|jq -r '.["last-catchpoint"]')
 </code></pre>
 
 ### <mark style="color:orange;">Step 5 : Watch your node syncing</mark>
