@@ -1,4 +1,4 @@
-# ⚡ Advanced - Lvl.2
+# ⚡ ADV: Linux terminal install
 
 ## Installing Voi testnet node
 
@@ -39,7 +39,7 @@ systemctl stop algorand
 
 ```bash
 algocfg set -p DNSBootstrapID -v "<network>.voi.network"
-algocfg set -p GossipFanout -v 9
+algocfg set -p GossipFanout -v 8
 algocfg set -p EnableCatchupFromArchiveServers true
 ```
 
@@ -49,7 +49,7 @@ Your `/var/lib/algorand/config.json` should look like :
 
 ```json
 {
-        "GossipFanout": 9,
+        "GossipFanout": 8,
         "DNSBootstrapID": "<network>.voi.network",
         "EnableCatchupFromArchiveServers": true
 }
@@ -64,20 +64,15 @@ genesis.json
 You can also do it with this command:
 
 ```bash
-sudo curl -s -o /var/lib/algorand/genesis.json https://voitest-api.algorpc.pro/genesis
+sudo curl -s -o /var/lib/algorand/genesis.json https://testnet-api.voi.nodly.io/genesis
 ```
 
 ### <mark style="color:orange;">Step 3 : Enable anonymous telemetry</mark>
 
-{% hint style="info" %}
-This step is optional but will help us monitor the network and will give you access to your node voting stats on Voi's monitoring portal.
+{% hint style="danger" %}
+There is no central telemetry sink for Voi. \
+Do not enable it.&#x20;
 {% endhint %}
-
-#### :point\_right: Enable telemetry :point\_left:
-
-```bash
-diagcfg telemetry enable
-```
 
 ### <mark style="color:orange;">Step 4 : Fast catch-up</mark>
 
@@ -100,7 +95,7 @@ systemctl start algorand
 #### Do the fast catch-up
 
 <pre class="language-bash"><code class="lang-bash"><strong>sudo apt install -y jq 
-</strong>goal node catchup $(curl -s https://voitest-api.algorpc.pro/v2/status|jq -r '.["last-catchp
+</strong>goal node catchup $(curl -s https://testnet-api.voi.nodly.io/v2/status|jq -r '.["last-catchp
 oint"]')
 </code></pre>
 
@@ -113,3 +108,11 @@ watch goal node status
 ```
 
 You node is synced once `Sync Time:` reads `0.0s`
+
+
+
+### <mark style="color:orange;">Peer2Peer relay discovery (TBA)</mark>
+
+{% hint style="info" %}
+P2P relay discovery allows connection to fully permissionless network without centrally managed relays. Watch this place for P2P setup info.
+{% endhint %}

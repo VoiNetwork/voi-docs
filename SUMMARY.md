@@ -5,7 +5,7 @@
 ## Testnet
 
 * [Node running](testnet/node-running/README.md)
-  * [⚡ Advanced - Lvl.2](testnet/node-running/advanced-lvl.2.md)
+  * [⚡ ADV: Linux terminal install](testnet/node-running/advanced-lvl.2.md)
   * [Single click catchup node](testnet/node-running/single-click-catchup-node.md)
   * [Diagnosing issues](testnet/node-running/diagnosing-issues.md)
 * [Setting up a Relay](testnet/setting-up-a-relay.md)
