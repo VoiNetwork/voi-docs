@@ -67,11 +67,15 @@ Or you can download the genesis.json [here](https://testnet-api.voi.nodly.io/gen
 
 ### <mark style="color:orange;">Step 3 : Enable telemetry</mark>
 
+{% hint style="info" %}
+Telemetry server does not process/store your node IP address.
+{% endhint %}
+
 Enabling telemetry is optional for normal participation but required if you want to prove your node's performance. You can name your node but it is not required.&#x20;
 
 ```
 # name you node
-diagcfg telemetry name -n "Lab.voi"
+diagcfg telemetry name -n "turbo.voi"
 ```
 
 ```
@@ -91,7 +95,7 @@ Node = Lab, Guid = 12455678-7434-4423-91ee-0a3500ec5680
 ### <mark style="color:orange;">Step 4 : Fast catch-up</mark>
 
 {% hint style="info" %}
-This will sync you non-archival node in minutes
+This will sync your non-archival node in minutes
 {% endhint %}
 
 #### Start your node either with
