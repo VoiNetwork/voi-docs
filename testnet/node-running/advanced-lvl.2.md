@@ -65,12 +65,28 @@ sudo curl -s -o /var/lib/algorand/genesis.json https://testnet-api.voi.nodly.io/
 
 Or you can download the genesis.json [here](https://testnet-api.voi.nodly.io/genesis) as well.&#x20;
 
-### <mark style="color:orange;">Step 3 : Enable anonymous telemetry</mark>
+### <mark style="color:orange;">Step 3 : Enable telemetry</mark>
 
-{% hint style="danger" %}
-There is no central telemetry sink for Voi. \
-Do not enable it.&#x20;
-{% endhint %}
+Enabling telemetry is optional for normal participation but required if you want to prove your node's performance. You can name your node but it is not required.&#x20;
+
+```
+# name you node
+diagcfg telemetry name -n "Lab.voi"
+```
+
+```
+# enable telemetry
+diagcfg telemetry enable
+```
+
+Confirm telemetry is configured:
+
+```
+root@alab:~# diagcfg telemetry status 
+
+Remote logging is enabled. 
+Node = Lab, Guid = 12455678-7434-4423-91ee-0a3500ec5680
+```
 
 ### <mark style="color:orange;">Step 4 : Fast catch-up</mark>
 
