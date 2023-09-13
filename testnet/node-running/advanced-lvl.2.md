@@ -92,6 +92,10 @@ Remote logging is enabled.
 Node = Lab, Guid = 12455678-7434-4423-91ee-0a3500ec5680
 ```
 
+{% hint style="warning" %}
+If you enable telemetry on a working node you need to restart it
+{% endhint %}
+
 ### <mark style="color:orange;">Step 4 : Fast catch-up</mark>
 
 {% hint style="info" %}
