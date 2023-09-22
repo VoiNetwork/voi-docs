@@ -39,7 +39,6 @@ systemctl stop algorand
 
 ```bash
 algocfg set -p DNSBootstrapID -v "<network>.voi.network"
-algocfg set -p GossipFanout -v 8
 algocfg set -p EnableCatchupFromArchiveServers -v true
 ```
 
@@ -49,7 +48,6 @@ Your `/var/lib/algorand/config.json` should look like :
 
 ```json
 {
-        "GossipFanout": 8,
         "DNSBootstrapID": "<network>.voi.network",
         "EnableCatchupFromArchiveServers": true
 }
